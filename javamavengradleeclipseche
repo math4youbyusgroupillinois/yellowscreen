@@ -1,0 +1,80 @@
+{
+  "metadata": {
+    "name": "wksp-cfx6"
+  },
+  "projects": [
+    {
+      "name": "console-java-simple",
+      "source": {
+        "location": "https://github.com/che-samples/console-java-simple.git",
+        "type": "git",
+        "branch": "java1.11"
+      }
+    }
+  ],
+  "attributes": {
+    "persistVolumes": "false"
+  },
+  "components": [
+    {
+      "id": "redhat/java11/latest",
+      "type": "chePlugin"
+    },
+    {
+      "mountSources": true,
+      "memoryLimit": "512Mi",
+      "type": "dockerimage",
+      "volumes": [
+        {
+          "name": "gradle",
+          "containerPath": "/home/gradle/.gradle"
+        }
+      ],
+      "alias": "gradle",
+      "image": "quay.io/eclipse/che-java11-gradle:nightly",
+      "env": [
+        {
+          "value": "/home/gradle/.gradle",
+          "name": "GRADLE_USER_HOME"
+        },
+        {
+          "value": "-XX:MaxRAMPercentage=50 -XX:+UseParallelGC -XX:MinHeapFreeRatio=10 -XX:MaxHeapFreeRatio=20 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xms20m -Djava.security.egd=file:/dev/./urandom",
+          "name": "JAVA_OPTS"
+        },
+        {
+          "value": "-XX:MaxRAMPercentage=50 -XX:+UseParallelGC -XX:MinHeapFreeRatio=10 -XX:MaxHeapFreeRatio=20 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xms20m -Djava.security.egd=file:/dev/./urandom",
+          "name": "JAVA_TOOL_OPTIONS"
+        },
+        {
+          "value": "/home/gradle",
+          "name": "HOME"
+        }
+      ]
+    }
+  ],
+  "apiVersion": "1.0.0",
+  "commands": [
+    {
+      "name": "gradle build",
+      "actions": [
+        {
+          "workdir": "${CHE_PROJECTS_ROOT}/console-java-simple",
+          "type": "exec",
+          "command": "gradle build",
+          "component": "gradle"
+        }
+      ]
+    },
+    {
+      "name": "gradle run",
+      "actions": [
+        {
+          "workdir": "${CHE_PROJECTS_ROOT}/console-java-simple",
+          "type": "exec",
+          "command": "gradle run",
+          "component": "gradle"
+        }
+      ]
+    }
+  ]
+}
