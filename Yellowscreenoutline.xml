@@ -1,0 +1,46 @@
+<Root>
+<Header info="Created with miMind software."></Header>
+<Content>
+<Node Title="Yellowscreen">
+<Node>
+<Node Title="Energy Hub 2"></Node>
+</Node>
+<Node>
+<Node>
+<Node Title="Tumblr"></Node>
+<Node></Node>
+<Node Title="Flipboard"></Node>
+</Node>
+</Node>
+<Node Title="Google"></Node>
+<Node Title="Postmark App">
+<Node Title="Postman">
+<Node Title="API">
+<Node Title="Stoplight API"></Node>
+<Node></Node>
+<Node Title="Mailchimp">
+<Node Title="RR Donnely Chicago"></Node>
+</Node>
+<Node Title="MailGun"></Node>
+</Node>
+</Node>
+</Node>
+<Node Title="Box Cloud">
+<Node Title="FTP">
+<Node Title="Dropbox"></Node>
+</Node>
+</Node>
+<Node Title="Github">
+<Node Title="Bitbucket"></Node>
+</Node>
+<Node Title="Bots">
+<Node Title="Facebook Messenger"></Node>
+</Node>
+<Node Title="Microsoft"></Node>
+<Node Title="DNS Provider">
+<Node Title="GoDaddy"></Node>
+<Node Title="DNS Check"></Node>
+</Node>
+</Node>
+</Content>
+</Root>
