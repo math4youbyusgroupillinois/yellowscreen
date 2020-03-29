@@ -3,7 +3,12 @@
 <Content>
 <Node Title="Yellowscreen">
 <Node>
-<Node Title="Energy Hub 2"></Node>
+<Node Title="Energy Hub 2">
+<Node Title="YAISN"></Node>
+</Node>
+<Node Title="AOIDOS"></Node>
+<Node Title="MUPPETS OS"></Node>
+<Node Title="COSINE"></Node>
 </Node>
 <Node>
 <Node>
@@ -35,6 +40,7 @@
 </Node>
 <Node Title="Bots">
 <Node Title="Facebook Messenger"></Node>
+<Node Title="Whats App"></Node>
 </Node>
 <Node Title="Microsoft"></Node>
 <Node Title="DNS Provider">
